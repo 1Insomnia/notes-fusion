@@ -105,3 +105,16 @@ body {
   margin-bottom: 5px;
   font-size: 14px;
 }
+
+.auth-layout {
+  padding-top: 64px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}

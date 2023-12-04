@@ -1,12 +1,14 @@
-import './AuthLayout.css'
 import { Outlet } from 'react-router-dom'
-
 // Components
+import Header from '@/components/Header'
 
 export default function AuthLayout() {
   return (
-    <main className="auth-layout">
-      <Outlet />
-    </main>
+    <>
+      <Header />
+      <main className="auth-layout">
+        <Outlet />
+      </main>
+    </>
   )
 }
