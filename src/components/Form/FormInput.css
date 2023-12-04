@@ -1,0 +1,29 @@
+.form-input, .form-label {
+  display: block;
+  width: 100%;
+  color: var(--bg);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.form-input {
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: none;
+}
+
+.form-input:focus {
+  border: 3px solid var(--primary);
+}
+
+.form-errors {
+  color: #faa;
+}

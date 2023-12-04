@@ -1,19 +1,76 @@
-import { useState } from 'react'
+import FormInput from '@/components/form/FormInput'
+import FormBtn from '@/components/form/FormBtn'
+import TextLink from '@/components/TextLink'
 
-import RegisterForm from '@/components/form/RegisterForm'
+import { useForm } from 'react-hook-form'
 
-export default function Register() {
-  const [user, setUser] = useState({
-    email: '',
-    password: '',
-    passwordConfirm: ''
-  })
+export default function RegisterForm() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    watch,
+    formState: { errors }
+  } = useForm()
+  console.log(errors)
 
-  console.log(user)
+  const onSubmit = data => {
+    console.log(data)
+    reset()
+  }
 
   return (
-    <div>
-      <RegisterForm setUser={setUser} />
-    </div>
+    <form className="max-w-sm mx-auto" onSubmit={handleSubmit(onSubmit)}>
+      <h1 className="mb-10">Register</h1>
+      <div className="mb-10">
+        <FormInput
+          cn="mb-5"
+          type="email"
+          name="email"
+          label="email"
+          errors={errors}
+          register={register}
+          validationSchema={{
+            required: 'Email is required'
+          }}
+          required
+        />
+        <FormInput
+          cn="mb-5"
+          type="password"
+          name="password"
+          label="password"
+          errors={errors}
+          register={register}
+          validationSchema={{
+            required: 'Password is required'
+          }}
+          required
+        />
+        <FormInput
+          cn="mb-5"
+          type="password"
+          name="passwordConfirm"
+          label="Password Confirm"
+          errors={errors}
+          register={register}
+          validationSchema={{
+            required: 'Password is required',
+            validate: val => {
+              if (watch('password') !== val) {
+                return 'Your passwords do no match'
+              }
+            }
+          }}
+          requiredz
+        />
+      </div>
+      <div className="mb-5">
+        <FormBtn text="Register" />
+      </div>
+      <div className="text-right">
+        <TextLink to="/login" text="Already have an accout ? Login." />
+      </div>
+    </form>
   )
 }
