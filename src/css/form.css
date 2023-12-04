@@ -1,0 +1,42 @@
+.form {
+  padding: 20px;
+  max-width: 540px;
+  border-radius: 1rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.form-label {
+  text-transform: capitalize;
+}
+
+.form-title {
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
+
+.form-btn {
+  margin-top: 20px;
+}
+
+.form-link {
+  margin-top: 20px;
+  display: block;
+  text-align: right;
+}
+
+.form-btn {
+  margin-top: 40px;
+}
+
+.form-link {
+  margin-top: 20px;
+}
+
+.form-wrapper {
+  max-width: mx-auto;
+  padding: 0 20px;
+}

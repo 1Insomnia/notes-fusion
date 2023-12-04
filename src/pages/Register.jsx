@@ -15,19 +15,17 @@ export default function RegisterForm() {
   console.log(errors)
 
   const onSubmit = data => {
-    console.log(data)
     reset()
   }
 
   return (
-    <form className="max-w-sm mx-auto" onSubmit={handleSubmit(onSubmit)}>
-      <h1 className="mb-10">Register</h1>
-      <div className="mb-10">
+    <div className="form-wrapper">
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <h1 className="form-title">Register</h1>
         <FormInput
-          cn="mb-5"
           type="email"
           name="email"
-          label="email"
+          label="Email"
           errors={errors}
           register={register}
           validationSchema={{
@@ -36,10 +34,9 @@ export default function RegisterForm() {
           required
         />
         <FormInput
-          cn="mb-5"
           type="password"
           name="password"
-          label="password"
+          label="Password"
           errors={errors}
           register={register}
           validationSchema={{
@@ -48,7 +45,6 @@ export default function RegisterForm() {
           required
         />
         <FormInput
-          cn="mb-5"
           type="password"
           name="passwordConfirm"
           label="Password Confirm"
@@ -64,13 +60,11 @@ export default function RegisterForm() {
           }}
           requiredz
         />
-      </div>
-      <div className="mb-5">
         <FormBtn text="Register" />
-      </div>
-      <div className="text-right">
-        <TextLink to="/login" text="Already have an accout ? Login." />
-      </div>
-    </form>
+        <div className="form-link">
+          <TextLink to="/login" text="Already have an accout ? Login." />
+        </div>
+      </form>
+    </div>
   )
 }

@@ -23,6 +23,7 @@ export default function FormInput({
         name={name}
         type={type}
         autoFocus={focus}
+        autoComplete="off"
         {...register(name, validationSchema)}
       />
       {errors && errors[name]?.type === 'required' && (
