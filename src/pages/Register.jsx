@@ -1,19 +1,19 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import RegisterForm from "@/components/form/RegisterForm";
+import RegisterForm from '@/components/form/RegisterForm'
 
 export default function Register() {
   const [user, setUser] = useState({
-    email: "",
-    password: "",
-    passwordConfirm: "",
-  });
+    email: '',
+    password: '',
+    passwordConfirm: ''
+  })
 
-  console.log(user);
+  console.log(user)
 
   return (
     <div>
       <RegisterForm setUser={setUser} />
     </div>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom'
 
 // Components
 
@@ -10,5 +10,5 @@ export default function AuthLayout() {
         <Outlet />
       </main>
     </div>
-  );
+  )
 }

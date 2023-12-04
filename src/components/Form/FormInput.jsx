@@ -6,13 +6,13 @@ export default function FormInput({
   required,
   type,
   validationSchema,
-  cn,
+  cn
 }) {
   return (
     <div className={cn}>
       <label className="" htmlFor={label}>
         {label}
-        {required && "*"}
+        {required && '*'}
       </label>
       <input
         className=""
@@ -21,12 +21,12 @@ export default function FormInput({
         type={type}
         {...register(name, validationSchema)}
       />
-      {errors && errors[name]?.type === "required" && (
+      {errors && errors[name]?.type === 'required' && (
         <span className="">{errors[name]?.message}</span>
       )}
-      {errors && errors[name]?.type === "validate" && (
+      {errors && errors[name]?.type === 'validate' && (
         <span className="">{errors[name]?.message}</span>
       )}
     </div>
-  );
+  )
 }

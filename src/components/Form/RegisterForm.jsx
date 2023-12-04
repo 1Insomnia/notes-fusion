@@ -1,8 +1,8 @@
-import FormInput from "@/components/form/FormInput";
-import FormBtn from "@/components/form/FormBtn";
-import TextLink from "@/components/TextLink";
+import FormInput from '@/components/form/FormInput'
+import FormBtn from '@/components/form/FormBtn'
+import TextLink from '@/components/TextLink'
 
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form'
 
 export default function RegisterForm({ setUser }) {
   const {
@@ -10,14 +10,14 @@ export default function RegisterForm({ setUser }) {
     handleSubmit,
     reset,
     watch,
-    formState: { errors },
-  } = useForm();
-  console.log(errors);
+    formState: { errors }
+  } = useForm()
+  console.log(errors)
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
-  };
+  const onSubmit = data => {
+    console.log(data)
+    reset()
+  }
 
   return (
     <div>
@@ -32,7 +32,7 @@ export default function RegisterForm({ setUser }) {
             errors={errors}
             register={register}
             validationSchema={{
-              required: "Email is required",
+              required: 'Email is required'
             }}
             required
           />
@@ -44,7 +44,7 @@ export default function RegisterForm({ setUser }) {
             errors={errors}
             register={register}
             validationSchema={{
-              required: "Password is required",
+              required: 'Password is required'
             }}
             required
           />
@@ -56,12 +56,12 @@ export default function RegisterForm({ setUser }) {
             errors={errors}
             register={register}
             validationSchema={{
-              required: "Password is required",
-              validate: (val) => {
-                if (watch("password") !== val) {
-                  return "Your passwords do no match";
+              required: 'Password is required',
+              validate: val => {
+                if (watch('password') !== val) {
+                  return 'Your passwords do no match'
                 }
-              },
+              }
             }}
             requiredz
           />
@@ -74,5 +74,5 @@ export default function RegisterForm({ setUser }) {
         </div>
       </form>
     </div>
-  );
+  )
 }

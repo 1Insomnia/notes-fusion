@@ -1,17 +1,17 @@
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  Route,
-} from "react-router-dom";
+  Route
+} from 'react-router-dom'
 
-import AuthLayout from "@/components/layouts/AuthLayout";
-import GuestLayout from "@/components/layouts/GuestLayout";
+import AuthLayout from '@/components/layouts/AuthLayout'
+import GuestLayout from '@/components/layouts/GuestLayout'
 // Pages
 // Auth
-import Dashboard from "@/pages/Dashboard";
+import Dashboard from '@/pages/Dashboard'
 // Guest
-import Login from "@/pages/Login";
-import Register from "@/pages/Register";
+import Login from '@/pages/Login'
+import Register from '@/pages/Register'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +27,6 @@ const router = createBrowserRouter(
       </Route>
     </Route>
   )
-);
+)
 
-export default router;
+export default router

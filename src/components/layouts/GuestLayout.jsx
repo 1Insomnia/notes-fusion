@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom'
 
 export default function GuestLayout() {
   return (
@@ -7,5 +7,5 @@ export default function GuestLayout() {
         <Outlet />
       </div>
     </main>
-  );
+  )
 }

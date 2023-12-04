@@ -1,21 +1,21 @@
-import FormBtn from "@/components/form/FormBtn";
-import { useForm } from "react-hook-form";
-import TextLink from "@/components/TextLink";
-import FormInput from "@/components/form/FormInput";
+import FormBtn from '@/components/form/FormBtn'
+import { useForm } from 'react-hook-form'
+import TextLink from '@/components/TextLink'
+import FormInput from '@/components/form/FormInput'
 
 export default function Form({ user, setUser }) {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
-  } = useForm();
+    formState: { errors }
+  } = useForm()
 
-  const onSubmit = (data) => {
-    setUser(data);
-    console.log(user);
-    reset();
-  };
+  const onSubmit = data => {
+    setUser(data)
+    console.log(user)
+    reset()
+  }
 
   return (
     <div>
@@ -30,7 +30,7 @@ export default function Form({ user, setUser }) {
             errors={errors}
             register={register}
             validationSchema={{
-              required: "Email is required",
+              required: 'Email is required'
             }}
             required
           />
@@ -42,7 +42,7 @@ export default function Form({ user, setUser }) {
             errors={errors}
             register={register}
             validationSchema={{
-              required: "Email is required",
+              required: 'Email is required'
             }}
             required
           />
@@ -55,5 +55,5 @@ export default function Form({ user, setUser }) {
         </div>
       </form>
     </div>
-  );
+  )
 }
