@@ -25,8 +25,11 @@ export default function CreateNoteForm({ setNotes }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="text-primary mb-10 border-b border-b-fg">Create Note</h1>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="p-5 bg-bg-l shadow-md rounded-md border-[1px] border-bd"
+      >
+        <h1 className="mb-10">Create Note</h1>
         <div>
           <FormInput
             focus={true}

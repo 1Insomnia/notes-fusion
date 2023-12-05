@@ -21,7 +21,7 @@ export default function RegisterForm() {
   return (
     <div className="pt-10">
       <form
-        className="p-5 rounded-xl bg-bg-l"
+        className="p-5 bg-bg-l shadow-md rounded-md border-[1px] border-bd"
         onSubmit={handleSubmit(onSubmit)}
       >
         <h1 className="mb-5">Register</h1>

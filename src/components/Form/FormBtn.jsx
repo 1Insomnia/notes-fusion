@@ -5,7 +5,7 @@ export default function FormBtn({ text, disabled, className }) {
   return (
     <button
       className={cn(
-        'block h-10 uppercase font-bold tracking-tighter text-fg bg-primary px-6 rounded-md hover:opacity-80',
+        'block h-10 uppercase font-bold tracking-tighter text-fg-d bg-primary-400 px-6 rounded-md hover:opacity-80',
         className
       )}
       type="submit"
