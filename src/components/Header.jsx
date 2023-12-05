@@ -9,10 +9,16 @@ function Header() {
         <nav className="h-16 flex items-center justify-between">
           <NavLink to="/">Dashboard</NavLink>
           <div className="flex items-center gap-4">
-            <NavLink to="/notes" className="nav-menu-link">
+            <NavLink
+              to="/notes"
+              className="hover:text-secondary hover:underline"
+            >
               Notes
             </NavLink>
-            <NavLink to="/profile" className="nav-menu-link">
+            <NavLink
+              to="/profile"
+              className="hover:text-secondary hover:underline"
+            >
               Profile
             </NavLink>
             <LogoutBtn />

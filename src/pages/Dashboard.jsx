@@ -1,5 +1,3 @@
-import './Dashboard.css'
-
 import { useState } from 'react'
 
 import CreateNoteForm from '@/components/Form/CreateNoteForm'
