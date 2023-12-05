@@ -4,11 +4,11 @@ import Container from '@/components/Container'
 
 function Header() {
   return (
-    <header className="">
+    <header className="fixed w-full top-0 left-0 backdrop-blur-md">
       <Container>
-        <nav className="">
+        <nav className="h-16 flex items-center justify-between">
           <NavLink to="/">Dashboard</NavLink>
-          <div className="">
+          <div className="flex items-center gap-4">
             <NavLink to="/notes" className="nav-menu-link">
               Notes
             </NavLink>

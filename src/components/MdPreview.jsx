@@ -5,7 +5,7 @@ import Markdown from 'react-markdown'
 export default function MdPreview({ source }) {
   return (
     <div className="md-preview-wrapper">
-      <h2>Preview</h2>
+      <h2 className="text-primary mb-10 border-b border-b-fg">Preview</h2>
       <Markdown classname="md-preview">{source}</Markdown>
     </div>
   )

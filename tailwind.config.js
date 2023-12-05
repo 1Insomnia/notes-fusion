@@ -6,7 +6,10 @@ export default {
   theme: {
     extends: {
       height: {
-        vp: 'calc(100vh - 64px)'
+        'screen-cropped': 'calc(100vh - 64px)'
+      },
+      minHeight: {
+        vp: '1000px'
       }
     },
     fontFamily: {

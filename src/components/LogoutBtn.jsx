@@ -1,11 +1,13 @@
 import { useAuth } from '@/context/AuthProvider'
-import './LogoutBtn.syle.css'
 
 export default function LogoutBtn() {
   const { logout } = useAuth()
 
   return (
-    <button className="logout-btn" onClick={logout}>
+    <button
+      className="block h-10 uppercase font-bold tracking-tighter text-fg bg-secondary px-6 rounded-md hover:opacity-80"
+      onClick={logout}
+    >
       Logout
     </button>
   )

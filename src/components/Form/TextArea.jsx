@@ -10,13 +10,13 @@ export default function TextArea({
   validationSchema
 }) {
   return (
-    <div className="form-group">
-      <label className="form-label" htmlFor={label}>
+    <div className="">
+      <label className="block mb-2 capitalize text-primary" htmlFor={label}>
         {label}
         {required && '*'}
       </label>
       <textarea
-        className="note-editor"
+        className="outline-none block w-full text-bg rounded-md px-5 py-2 min-h-[280px] border-2 focus-within:border-primary"
         id={name}
         name={name}
         autoFocus={focus}
@@ -24,10 +24,10 @@ export default function TextArea({
         {...register(name, validationSchema)}
       ></textarea>
       {errors && errors[name]?.type === 'required' && (
-        <span className="form-errors">{errors[name]?.message}</span>
+        <span className="text-error">{errors[name]?.message}</span>
       )}
       {errors && errors[name]?.type === 'validate' && (
-        <span className="form-errors">{errors[name]?.message}</span>
+        <span className="text-error">{errors[name]?.message}</span>
       )}
     </div>
   )

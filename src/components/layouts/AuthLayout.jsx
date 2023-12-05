@@ -9,7 +9,7 @@ export default function AuthLayout() {
   return user ? (
     <div className="text-fg bg-bg">
       <Header />
-      <main className="auth-layout">
+      <main className="min-h-screen pt-16">
         <Outlet />
       </main>
     </div>

@@ -1,9 +1,0 @@
-.note-editor {
-  display: block;
-  width: 100%;
-  color: var(--bg);
-  border-radius: 5px;
-  padding: 20px 10px;
-  outline: none;
-  min-height: 280px;
-}

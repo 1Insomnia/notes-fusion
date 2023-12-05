@@ -1,4 +1,3 @@
-import './CreateNoteForm.css'
 import PropTypes from 'prop-types'
 import { useForm } from 'react-hook-form'
 // Components
@@ -27,13 +26,14 @@ export default function CreateNoteForm({ setNotes }) {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h1>Create Note</h1>
+        <h1 className="text-primary mb-10 border-b border-b-fg">Create Note</h1>
         <div>
           <FormInput
             focus={true}
             type="text"
             name="title"
-            label="title"
+            label="Title"
+            htmlFor="title"
             errors={errors}
             register={register}
             validationSchema={{
@@ -52,7 +52,7 @@ export default function CreateNoteForm({ setNotes }) {
             }}
             required
           />
-          <FormBtn text="Add Note" />
+          <FormBtn text="Add Note" className="mt-5" />
         </div>
       </form>
       <MdPreview source={watch('content')} />
