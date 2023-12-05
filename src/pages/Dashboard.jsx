@@ -2,8 +2,9 @@ import './Dashboard.css'
 
 import { useState } from 'react'
 
-import MainContent from '@/components/MainContent'
-import SideContent from '@/components/SideContent'
+import CreateNoteForm from '@/components/Form/CreateNoteForm'
+import Container from '@/components/Container'
+import Spacer from '@/components/Spacer'
 
 export default function Dashboard() {
   const [notes, setNotes] = useState([
@@ -28,9 +29,10 @@ export default function Dashboard() {
   ])
 
   return (
-    <div className="content-wrapper">
-      <SideContent notes={notes} />
-      <MainContent setNotes={setNotes} />
-    </div>
+    <Container>
+      <Spacer t="md">
+        <CreateNoteForm setNotes={setNotes} />
+      </Spacer>
+    </Container>
   )
 }

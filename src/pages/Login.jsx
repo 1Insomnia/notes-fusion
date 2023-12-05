@@ -10,7 +10,7 @@ import FormInput from '@/components/form/FormInput'
 import supabase from '@/lib/supabase'
 
 export default function Form() {
-  const [loginErrors, setLoginErrors] = useState('')
+  const [loginErrors, setLoginErrors] = useState([])
   const navigate = useNavigate()
 
   const {
@@ -21,16 +21,15 @@ export default function Form() {
   } = useForm()
 
   const login = async (email, password) => {
-    setLoading(true)
     try {
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password
       })
-      if (error) throw error
+      setLoginErrors(prevErrors => [...prevErrors, error])
       navigate('/')
     } catch (error) {
-      console.log(error)
+      setLoginErrors(prevErrors => [...prevErrors, error])
     }
   }
 

@@ -10,6 +10,7 @@ import GuestLayout from '@/components/layouts/GuestLayout'
 // Pages
 // Auth
 import Dashboard from '@/pages/Dashboard'
+import Notes from '@/pages/Notes'
 // Guest
 import Login from '@/pages/Login'
 import Register from '@/pages/Register'
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       {/* Auth */}
       <Route path="/" element={<AuthLayout />}>
         <Route index element={<Dashboard />} />
+        <Route path="/notes" element={<Notes />} />
       </Route>
       {/* Guest */}
       <Route element={<GuestLayout />}>

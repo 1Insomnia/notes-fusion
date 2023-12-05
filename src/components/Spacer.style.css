@@ -1,0 +1,15 @@
+.spacer {
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .spacer {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .spacer {
+    padding: 60px 0;
+  }
+}

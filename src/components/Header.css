@@ -15,7 +15,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1rem;
 }
 
 .nav-menu {
@@ -29,13 +28,6 @@
   text-decoration: underline;
 }
 
-.logout-btn {
-  color: var(--fg-l);
-  background-color: var(--primary);
-  min-height: 40px;
-  padding: 0 1rem;
-  border-radius: 5px;
-}
 
 .side-content-toggle {
   height: 2rem;
