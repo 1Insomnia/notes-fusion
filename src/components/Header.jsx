@@ -1,16 +1,14 @@
-import './Header.css'
-
 import { NavLink } from 'react-router-dom'
 import LogoutBtn from '@/components/LogoutBtn'
 import Container from '@/components/Container'
 
 function Header() {
   return (
-    <header className="header">
+    <header className="">
       <Container>
-        <nav className="nav">
+        <nav className="">
           <NavLink to="/">Dashboard</NavLink>
-          <div className="nav-menu">
+          <div className="">
             <NavLink to="/notes" className="nav-menu-link">
               Notes
             </NavLink>

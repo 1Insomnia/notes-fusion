@@ -40,10 +40,13 @@ export default function Form() {
   }
 
   return (
-    <div className="form-wrapper">
-      <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="form-title">Login</h1>
-        <p className="text-error">{loginErrors}</p>
+    <div className="pt-10">
+      <form
+        className="p-5 rounded-xl bg-bg-l"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <h1 className="mb-5">Login</h1>
+        <p className="text-secondary">{loginErrors}</p>
         <FormInput
           focus={true}
           type="email"
@@ -68,7 +71,7 @@ export default function Form() {
           required
         />
         <FormBtn text="Login" />
-        <div className="form-link">
+        <div className="text-right mt-5">
           <TextLink to="/register" text="Don't have an accout ? Register." />
         </div>
       </form>

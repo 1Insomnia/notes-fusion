@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import './FormInput.css'
 
 export default function FormInput({
   name,
@@ -8,17 +7,18 @@ export default function FormInput({
   register,
   errors,
   required,
+  htmlFor,
   focus = false,
   validationSchema
 }) {
   return (
-    <div className="form-group">
-      <label className="form-label" htmlFor={label}>
+    <div className="mb-5">
+      <label className="block mb-2 capitalize text-primary" htmlFor={htmlFor}>
         {label}
         {required && '*'}
       </label>
       <input
-        className="form-input"
+        className="outline-none block rounded-md h-10 text-bg bg-fg px-2 w-full border-2 focus-within:border-primary"
         id={name}
         name={name}
         type={type}
@@ -27,10 +27,10 @@ export default function FormInput({
         {...register(name, validationSchema)}
       />
       {errors && errors[name]?.type === 'required' && (
-        <span className="form-errors">{errors[name]?.message}</span>
+        <span className="text-error mt-2 block">{errors[name]?.message}</span>
       )}
       {errors && errors[name]?.type === 'validate' && (
-        <span className="form-errors">{errors[name]?.message}</span>
+        <span className="text-error mt-2 block">{errors[name]?.message}</span>
       )}
     </div>
   )
@@ -40,6 +40,7 @@ FormInput.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
+  htmlFor: PropTypes.string,
   focus: PropTypes.bool,
   errors: PropTypes.object,
   validationSchema: PropTypes.object,

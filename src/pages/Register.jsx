@@ -19,15 +19,20 @@ export default function RegisterForm() {
   }
 
   return (
-    <div className="form-wrapper">
-      <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="form-title">Register</h1>
+    <div className="pt-10">
+      <form
+        className="p-5 rounded-xl bg-bg-l"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <h1 className="mb-5">Register</h1>
         <FormInput
           type="email"
           name="email"
           label="Email"
+          htmlFor="email"
           errors={errors}
           register={register}
+          focus={true}
           validationSchema={{
             required: 'Email is required'
           }}
@@ -36,6 +41,7 @@ export default function RegisterForm() {
         <FormInput
           type="password"
           name="password"
+          htmlFor="password"
           label="Password"
           errors={errors}
           register={register}
@@ -47,7 +53,8 @@ export default function RegisterForm() {
         <FormInput
           type="password"
           name="passwordConfirm"
-          label="Password Confirm"
+          label="password confirm"
+          htmlFor="passwordConfirm"
           errors={errors}
           register={register}
           validationSchema={{
@@ -58,10 +65,9 @@ export default function RegisterForm() {
               }
             }
           }}
-          requiredz
         />
         <FormBtn text="Register" />
-        <div className="form-link">
+        <div className="text-right mt-5">
           <TextLink to="/login" text="Already have an accout ? Login." />
         </div>
       </form>

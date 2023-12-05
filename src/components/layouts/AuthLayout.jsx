@@ -7,12 +7,12 @@ export default function AuthLayout() {
   const { user } = useAuth()
 
   return user ? (
-    <>
+    <div className="text-fg bg-bg">
       <Header />
       <main className="auth-layout">
         <Outlet />
       </main>
-    </>
+    </div>
   ) : (
     <Navigate to="/login" />
   )
