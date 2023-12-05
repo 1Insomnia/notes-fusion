@@ -15,6 +15,7 @@ import Notes from '@/pages/Notes'
 import Login from '@/pages/Login'
 import Register from '@/pages/Register'
 import NotFound from '@/pages/NotFound'
+import Profile from '@/pages/profile'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<AuthLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="/notes" element={<Notes />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
       {/* Guest */}
       <Route element={<GuestLayout />}>
