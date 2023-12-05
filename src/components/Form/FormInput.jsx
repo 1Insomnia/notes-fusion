@@ -13,7 +13,10 @@ export default function FormInput({
 }) {
   return (
     <div className="mb-5">
-      <label className="block mb-2 capitalize text-primary" htmlFor={htmlFor}>
+      <label
+        className="block mb-2 capitalize font-bold tracking-tighter text-sm"
+        htmlFor={htmlFor}
+      >
         {label}
         {required && '*'}
       </label>

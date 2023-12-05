@@ -4,17 +4,18 @@ export default function Note({ id, title, content }) {
   const handleDelete = () => console.log(id)
 
   return (
-    <li className="bg-bg-l text-fg flex items-center p-4 rounded-md">
+    <li className="bg-bg-l text-fg flex items-center py-3 px-5 rounded-md shadow-md cursor-pointer">
       <h3 className="w-1/2 truncate text-ellipsis text-sm m-0">{title}</h3>
       <p className="w-1/2 truncate text-ellipsis text-xs">{content}</p>
-      <div className="flex ml-4">
-        <button className="w-8 h-8 text-primary">
+      <div className="h-full flex ml-4">
+        <button className="w-12 h-12 text-secondary-600 hover:text-secondary-500 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
+            className="h-8 w-8"
           >
             <path
               strokeLinecap="round"
@@ -23,14 +24,17 @@ export default function Note({ id, title, content }) {
             />
           </svg>
         </button>
-        <button onClick={handleDelete} className="w-8 h-8 text-secondary">
+        <button
+          onClick={handleDelete}
+          className="w-12 h-12 text-primary-500 hover:text-primary-400  flex items-center justify-center"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-8 text-error"
+            className="h-8 w-8"
           >
             <path
               strokeLinecap="round"
