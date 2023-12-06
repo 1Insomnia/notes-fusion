@@ -11,12 +11,15 @@ export default function TextArea({
 }) {
   return (
     <div className="">
-      <label className="block mb-2 capitalize text-primary" htmlFor={label}>
+      <label
+        className="block mb-2 capitalize font-medium text-sm"
+        htmlFor={label}
+      >
         {label}
         {required && '*'}
       </label>
       <textarea
-        className="outline-none block w-full text-fg rounded-md p-2 min-h-[280px] border-[1px] border-bd focus-within:border-primary bg-bg"
+        className="border border-border outline-none block w-full text-fg rounded-md p-2 min-h-[280px] focus-within:border-primary-background bg-background"
         id={name}
         name={name}
         autoFocus={focus}

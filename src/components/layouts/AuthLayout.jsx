@@ -7,7 +7,7 @@ export default function AuthLayout() {
   const { user } = useAuth()
 
   return user ? (
-    <div className="text-fg bg-bg">
+    <div className="text-foreground bg-background">
       <Header />
       <main className="min-h-screen pt-16">
         <Outlet />

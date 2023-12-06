@@ -25,48 +25,41 @@ export default {
       sans: ['Inter', ...defaultTheme.fontFamily.sans]
     },
     colors: {
-      fg: {
-        DEFAULT: '#181818',
-        d: '#000'
+      background: 'hsl(0 0% 100%)',
+      foreground: 'hsl(240 10% 3.9%)',
+      card: {
+        foreground: 'hsl(240 10% 3.9%)',
+        background: 'hsl(0 0% 100%)'
       },
-      bg: {
-        DEFAULT: '#f9fafb',
-        l: '#fff',
-        d: '#e1e1e1',
-        input: '#333333'
+      popover: {
+        foreground: 'hsl(240 10% 3.9%)',
+        background: 'hsl(0 0% 100%)'
       },
       primary: {
-        DEFAULT: '#E43F62',
-        50: '#FBE0E6',
-        100: '#F8CED7',
-        200: '#F3AABA',
-        300: '#EE879C',
-        400: '#E9637F',
-        500: '#E43F62',
-        600: '#CE1D43',
-        700: '#9D1633',
-        800: '#6C0F23',
-        900: '#3A0813',
-        950: '#22050B'
+        foreground: 'hsl(355.7 100% 97.3%)',
+        background: 'hsl(142.1 76.2% 36.3%)'
       },
       secondary: {
-        DEFAULT: '#3FE4C1',
-        50: '#E0FBF5',
-        100: '#CEF8EF',
-        200: '#AAF3E4',
-        300: '#87EED8',
-        400: '#63E9CD',
-        500: '#3FE4C1',
-        600: '#1DCEA8',
-        700: '#169D80',
-        800: '#0F6C58',
-        900: '#083A30',
-        950: '#05221C'
+        foreground: 'hsl(355.7 100% 97.3%)',
+        background: 'hsl(240 4.8% 95.9%)'
       },
-      bd: {
-        DEFAULT: 'rgba(24, 24, 24, 0.15)'
+      muted: {
+        foreground: 'hsl(240 3.8% 46.1%)',
+        background: 'hsl(240 4.8% 95.9%)'
       },
-      error: '#ff2a64'
+      accent: {
+        foreground: 'hsl(240 5.9% 10%',
+        background: 'hsl(240 4.8% 95.9%)'
+      },
+      destructive: {
+        foreground: 'hsl(0 0% 98%)',
+        background: 'hsl(0 84.2% 60.2%)'
+      },
+      border: 'hsl(240 5.9% 90%)',
+      input: 'hsl(240 5.9% 90%)',
+      ring: 'hsl(142.1 76.2% 36.3%)',
+      error: 'hsl(0, 72%, 51%)',
+      warning: 'hsl(48, 96%, 53%)'
     },
     container: {
       center: true,

@@ -14,14 +14,14 @@ export default function FormInput({
   return (
     <div className="mb-5">
       <label
-        className="block mb-2 capitalize font-bold tracking-tighter text-sm"
+        className="block mb-2 capitalize font-medium text-sm"
         htmlFor={htmlFor}
       >
         {label}
         {required && '*'}
       </label>
       <input
-        className="outline-none block text-fg bg-bg w-full border-bd border-[1px] focus-within:border-primary px-4 py-3 rounded-md"
+        className="outline-none block text-fg bg-background w-full border border-border focus-within:border-primary-background px-4 py-3 rounded-md"
         // className="outline-none block rounded-md h-10 text-fg bg-bg-l px-2 w-full border-transparent border-2 focus-within:border-primary"
         id={name}
         name={name}

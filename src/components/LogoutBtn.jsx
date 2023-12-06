@@ -5,7 +5,7 @@ export default function LogoutBtn() {
 
   return (
     <button
-      className="block h-10 uppercase font-bold tracking-tighter text-fg-d bg-primary-400 px-6 rounded-md hover:opacity-80"
+      className="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-foreground text-primary-foreground shadow hover:bg-foreground/90 h-9 px-4 py-2"
       onClick={logout}
     >
       Logout

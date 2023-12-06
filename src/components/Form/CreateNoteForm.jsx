@@ -27,7 +27,7 @@ export default function CreateNoteForm({ setNotes }) {
     <div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="p-5 bg-bg-l shadow-md rounded-md border-[1px] border-bd"
+        className="p-5 rounded-lg bg-card-background text-card-foreground shadow-[0_2px_5px_rgba(15,23,42,0.08)]"
       >
         <h1 className="mb-10">Create Note</h1>
         <div>

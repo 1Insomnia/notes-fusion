@@ -1,3 +1,4 @@
+// Comps
 import FormInput from '@/components/form/FormInput'
 import FormBtn from '@/components/form/FormBtn'
 import TextLink from '@/components/TextLink'
@@ -12,16 +13,16 @@ export default function RegisterForm() {
     watch,
     formState: { errors }
   } = useForm()
-  console.log(errors)
 
   const onSubmit = data => {
+    console.log(data)
     reset()
   }
 
   return (
     <div className="pt-10">
       <form
-        className="p-5 bg-bg-l shadow-md rounded-md border-[1px] border-bd"
+        className="p-5 rounded-lg bg-card-background text-card-foreground shadow-[0_2px_5px_rgba(15,23,42,0.08)]"
         onSubmit={handleSubmit(onSubmit)}
       >
         <h1 className="mb-5">Register</h1>

@@ -7,12 +7,12 @@ import supabase from '@/lib/supabase'
 
 // Compos
 import NoteList from '@/components/NoteDisplay/NoteList'
+import NoteViewModal from '@/components/NoteDisplay/NoteViewModal'
 
 export default function Notes() {
   const { user } = useAuth()
 
   const [notes, setNotes] = useState([])
-  const [fetchErrors, setFetchErrors] = useState(null)
 
   useEffect(() => {
     const fetcher = async () => {
@@ -32,6 +32,7 @@ export default function Notes() {
           <h1 className="mb-10">Notes</h1>
           <NoteList notes={notes} />
         </div>
+        <NoteViewModal />
       </Spacer>
     </Container>
   )

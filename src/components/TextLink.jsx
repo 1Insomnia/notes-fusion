@@ -5,7 +5,10 @@ import { NavLink } from 'react-router-dom'
 
 export default function TextLink({ to, text, className }) {
   return (
-    <NavLink to={to} className={cn('text-primary hover:underline', className)}>
+    <NavLink
+      to={to}
+      className={cn('text-primary-background hover:underline', className)}
+    >
       {text}
     </NavLink>
   )
