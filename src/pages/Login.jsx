@@ -34,7 +34,6 @@ export default function Form() {
   }
 
   const onSubmit = async data => {
-    console.log(data)
     login(data.email, data.password)
     reset()
   }

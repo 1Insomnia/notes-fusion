@@ -2,15 +2,18 @@ import PropTypes from 'prop-types'
 import cn from 'classnames'
 import Container from '@/components/Container'
 import Spacer from '@/components/Spacer'
+import { useAppStore } from '@/context/AppStore'
 
-export default function NoteViewModal({ setVisible, visible, activeNote }) {
+export default function NoteViewModal() {
+  const { visible, setVisible, activeNote } = useAppStore()
+
   if (!activeNote) return
 
   const { title, content } = activeNote
 
   const handleClick = e => {
     e.preventDefault()
-    setVisible(prevVisible => !prevVisible)
+    setVisible(!visible)
   }
 
   return (
