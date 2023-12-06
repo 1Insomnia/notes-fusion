@@ -1,13 +1,13 @@
+import PropTypes from 'prop-types'
 import cn from 'classnames'
-import { useState } from 'react'
 
-export default function NoteViewModal() {
-  const [visible, setVisible] = useState(true)
-
+export default function NoteViewModal({ setVisible, visible, activeNote }) {
   const handleClick = e => {
     e.preventDefault()
-    setVisible(!visible)
+    setVisible(prevVisible => !prevVisible)
   }
+
+  if (!activeNote) return
 
   return (
     <div
@@ -36,8 +36,14 @@ export default function NoteViewModal() {
             />
           </svg>
         </button>
-        <h1 className="text-foreground">Note View</h1>
+        <h1 className="text-foreground">{activeNote.title}</h1>
       </div>
     </div>
   )
+}
+
+NoteViewModal.propTypes = {
+  visible: PropTypes.bool,
+  setVisible: PropTypes.func,
+  activeNote: PropTypes?.object
 }

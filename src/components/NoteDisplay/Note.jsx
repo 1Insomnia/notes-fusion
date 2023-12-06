@@ -1,14 +1,26 @@
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 
-export default function Note({ id, title }) {
+export default function Note({
+  id,
+  title,
+  content,
+  setActiveNote,
+  setVisible
+}) {
   const handleDelete = () => console.log(id)
 
   return (
     <li className="p-5 rounded-lg border border-border bg-card-background text-card-foreground shadow-sm flex justify-between items-center py-3 px-5 cursor-pointer">
       <h3 className="truncate text-ellipsis text-sm m-0">{title}</h3>
       <div className="h-full flex">
-        <button className="w-16 h-16 text-primary-background hover:text-primary-background/90 flex items-center justify-center">
+        <button
+          className="w-16 h-16 text-primary-background hover:text-primary-background/90 flex items-center justify-center"
+          onClick={() => {
+            setActiveNote({ id: id, title: title, content: content })
+            setVisible(prevVisible => !prevVisible)
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -70,5 +82,8 @@ export default function Note({ id, title }) {
 
 Note.propTypes = {
   id: PropTypes.number,
-  title: PropTypes.string
+  title: PropTypes.string,
+  content: PropTypes.string,
+  setActiveNote: PropTypes.func,
+  setVisible: PropTypes.func
 }
