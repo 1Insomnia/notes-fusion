@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 export default function Container({ children }) {
-  return <div className="container max-w-2xl">{children}</div>
+  return <div className="container">{children}</div>
 }
 
 Container.propTypes = {

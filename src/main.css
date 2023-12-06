@@ -55,11 +55,13 @@
 
 
 @layer components {
-  .logo {
+  .logo, .nav-link {
     position: relative;
   }
 
-  .active.logo::after {
+
+
+  .active.logo::after, .active.nav-link::after {
     content: "";
     position: absolute;
     left: 0;

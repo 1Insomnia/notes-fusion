@@ -19,7 +19,7 @@ export default function TextArea({
         {required && '*'}
       </label>
       <textarea
-        className="border border-border outline-none block w-full text-fg rounded-md p-2 min-h-[280px] focus-within:border-primary-background bg-background"
+        className="border border-border outline-none block w-full text-fg rounded-md p-2 min-h-[280px] lg:min-h-[500px] focus-within:border-primary-background bg-background"
         id={name}
         name={name}
         autoFocus={focus}

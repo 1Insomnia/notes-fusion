@@ -13,21 +13,13 @@ function Header() {
             </NavLink>
             <NavLink
               to="/notes"
-              className={({ isActive }) =>
-                isActive
-                  ? ' text-sm transition-colors text-foreground hover:text-foreground/80'
-                  : 'text-sm transition-colors text-foreground/60 hover:text-foreground/80'
-              }
+              className="text-sm text-foreground/60 hover:text-foreground/80 nav-link"
             >
               Notes
             </NavLink>
             <NavLink
               to="/profile"
-              className={({ isActive }) =>
-                isActive
-                  ? ' text-sm transition-colors text-foreground hover:text-foreground/80'
-                  : 'text-sm transition-colors text-foreground/60 hover:text-foreground/80'
-              }
+              className="text-sm text-foreground/60 hover:text-foreground/80 nav-link"
             >
               Profile
             </NavLink>
