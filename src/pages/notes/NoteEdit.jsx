@@ -1,16 +1,13 @@
-import { useParams } from 'react-router-dom'
+import { useAppStore } from '@/context/AppStore'
 
-import Container from '@/components/Container'
-import Spacer from '@/components/Spacer'
+import EditNoteForm from '@/components/Form/EditNoteForm'
 
-export default function NoteEdit() {
-  const { id } = useParams()
-
+export default function Dashboard() {
   return (
-    <Container>
-      <Spacer>
-        <h1>Note edit {id}</h1>
-      </Spacer>
-    </Container>
+    <div className="container">
+      <div className="pt-10">
+        <EditNoteForm />
+      </div>
+    </div>
   )
 }

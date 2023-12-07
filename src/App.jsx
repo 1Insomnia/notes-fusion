@@ -25,7 +25,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<AuthLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="/notes" element={<Notes />} />
-        <Route path="/notes/:id/edit" element={<NoteEdit />} />
+        <Route path="/:id/edit" element={<NoteEdit />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
       {/* Guest */}

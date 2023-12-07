@@ -1,23 +1,47 @@
 import PropTypes from 'prop-types'
+import supabase from '@/lib/supabase'
+import { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useAppStore } from '@/context/AppStore'
 // Components
 import FormInput from '@/components/Form/FormInput'
 import FormBtn from '@/components/Form/FormBtn'
 import TextArea from '@/components/Form/TextArea'
+import { useNavigate } from 'react-router-dom'
 
-export default function CreateNoteForm() {
-  const { addNote } = useAppStore()
+export default function EditNoteForm() {
+  const navigate = useNavigate()
+  const { id } = useParams()
+  const { activeNote, setActiveNote } = useAppStore()
+
+  useEffect(() => {
+    const fetcher = async () => {
+      let {
+        data: [dataSet],
+        error
+      } = await supabase.from('notes').select('id, title, content').eq('id', id)
+
+      setActiveNote({
+        id: dataSet.id,
+        title: dataSet.title,
+        content: dataSet.content
+      })
+    }
+    fetcher()
+  }, [id])
 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors }
-  } = useForm()
+  } = useForm({
+    values: { title: activeNote.title, content: activeNote.content } || {}
+  })
 
   const onSubmit = async data => {
-    // [TODO]
+    navigate('/')
     reset()
   }
 
@@ -48,13 +72,13 @@ export default function CreateNoteForm() {
         required
       />
       <FormBtn
-        text="Add Note"
-        className="mt-5 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary-background text-foreground hover:bg-primary-background/90"
+        text="Edit Note"
+        className="mt-5 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-warning text-foreground hover:bg-warning/90"
       />
     </form>
   )
 }
 
-CreateNoteForm.propTypes = {
+EditNoteForm.propTypes = {
   setNotes: PropTypes.func
 }

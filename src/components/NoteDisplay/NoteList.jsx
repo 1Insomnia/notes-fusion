@@ -2,18 +2,11 @@ import PropTypes from 'prop-types'
 // Compos
 import Note from '@/components/NoteDisplay/Note'
 
-export default function NoteList({ notes, setActiveNote, setVisible }) {
+export default function NoteList({ notes }) {
   return (
-    <ul className="space-y-5 md:grid md:grid-cols-2 md:gap-5 md:space-y-0 lg:grid lg:grid-cols-3 lg:space-y-0 note">
+    <ul className="">
       {notes.map(({ id, title, content }) => (
-        <Note
-          id={id}
-          title={title}
-          content={content}
-          key={id}
-          setActiveNote={setActiveNote}
-          setVisible={setVisible}
-        />
+        <Note id={id} title={title} content={content} key={id} />
       ))}
     </ul>
   )
