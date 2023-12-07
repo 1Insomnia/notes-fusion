@@ -1,12 +1,11 @@
 import Container from '@/components/Container'
-import Spacer from '@/components/Spacer'
 
 export default function Profile() {
   return (
     <Container>
-      <Spacer>
+      <div className="pt-5">
         <h1>Your profile noodle head!</h1>
-      </Spacer>
+      </div>
     </Container>
   )
 }

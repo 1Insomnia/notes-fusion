@@ -21,7 +21,7 @@ export default function FormInput({
         {required && '*'}
       </label>
       <input
-        className="outline-none block text-fg bg-background w-full border border-border focus-within:border-primary-background px-4 py-3 rounded-md"
+        className="outline-none block text-fg bg-background w-full border border-border focus-within:border-foreground px-4 py-3 rounded-md"
         id={name}
         name={name}
         type={type}

@@ -13,12 +13,6 @@ export default {
         3: '3px',
         4: '4px',
         5: '5px'
-      },
-      height: {
-        'screen-cropped': 'calc(100vh - 64px)'
-      },
-      minHeight: {
-        vp: '1000px'
       }
     },
     fontFamily: {
@@ -55,10 +49,17 @@ export default {
         foreground: 'hsl(0 0% 98%)',
         background: 'hsl(0 84.2% 60.2%)'
       },
+      success: {
+        DEFAULT: '#0070F3',
+        light: '#3291FF'
+      },
       border: 'hsl(240 5.9% 90%)',
       input: 'hsl(240 5.9% 90%)',
       ring: 'hsl(142.1 76.2% 36.3%)',
-      error: 'hsl(0, 72%, 51%)',
+      error: {
+        light: '#FF1A1A',
+        DEFAULT: '#E00'
+      },
       warning: 'hsl(48, 96%, 53%)'
     },
     container: {

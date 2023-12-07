@@ -66,7 +66,10 @@ export default function RegisterForm() {
             }
           }}
         />
-        <FormBtn text="Register" />
+        <FormBtn
+          text="Register"
+          className="bg-foreground text-background hover:bg-foreground/80"
+        />
         <div className="text-right mt-5">
           <TextLink to="/login" text="Already have an accout ? Login." />
         </div>

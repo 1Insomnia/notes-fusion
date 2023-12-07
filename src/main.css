@@ -53,22 +53,3 @@
     }
 }
 
-
-@layer components {
-  .logo, .nav-link {
-    position: relative;
-  }
-
-
-
-  .active.logo::after, .active.nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 3px;
-    @apply bg-foreground;
-  }
-}
-
